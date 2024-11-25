@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selector Examples</title>
+  <style>
+    /* 1. Universal selector (*) */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* 2. Class selector (.) */
+    .btn-primary{
+        background-color: blue;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: none;
+    }
+     
+    /* 3. ID selector (#) */
+    #header{
+        position: sticky;
+        top: 0;
+        background-color: aliceblue;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    /* 4. Attribute selector ([]) */
+    input[type="submit"]{
+        cursor: pointer;
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+    }
+
+    /* 5. :nth-child pseudo-class */
+    li:nth-child(odd){
+        background-color: aqua;
+    }
+
+    li:nth-child(even){
+        background-color: rgb(219, 27, 27);
+    }
+
+    /* 6. Descendant selector ( ) */
+    .card p {
+        font-size: 0.9rem;
+        color: blue;
+    }
+
+    /* 7. Direct child selector (>) */
+    .menu > li {
+        display: inline;
+        margin-top: 10px;
+        list-style: none;
+    }
+
+    /* 8. Adjacent sibling selector (+) */
+    h2 + p {
+        font-weight: bold;
+        color: brown;
+    }
+
+    /* 9. General sibling selector (~) */
+    h2 ~ p {
+        color: brown;
+        padding: 10px;
+    }
+
+    /* 10. :not() pseudo-class */
+    div:not(.special) {
+        border: 1px solid green;
+        padding: 10px;
+    }
+  </style>
+</head>
+<body>
+   <!-- 1. Universal selector (*) -->
+   <div>
+        <p>The universal selector applies styles to all elements</p>
+   </div>
+
+   <!-- 2. Class selector (.) -->
+   <a href="#" class="btn-primary">Primary</a>
+
+   <!-- 3. ID selector (#) -->
+   <div id="header">I am the Header</div>
+
+    <!-- 4. Attribute selector ([]) -->
+    <form action="">
+    <input type="text" placeholder="Enter text">
+    <input type="submit" value="Submit">
+    </form>
+
+    <!-- 5. :nth-child pseudo-class -->
+    <ul>
+        <li>1.</li>
+        <li>2.</li>
+        <li>3.</li>
+        <li>4.</li>
+        <li>5.</li>
+    </ul>
+
+     <!-- 6. Descendant selector ( ) -->
+      <div class="card">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, dolores?</p>
+      </div>
+
+    <!-- 7. Direct child selector (>) -->
+     <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+     </ul>
+
+    <!-- 8. Adjacent sibling selector (+) -->
+     <h2>Heading 1</h2>
+     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+     <p>Lorem ipsum dolor sit</p>
+
+     <!-- 9. General sibling selector (~) -->
+     <h2>Heading 1</h2>
+     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+     <p>Lorem ipsum dolor sit</p>
+
+    <!-- 10. :not() pseudo-class -->
+     <div class="special">Special DIV</div>
+     <div>Regular DIV</div>
+</body>
+</html>
